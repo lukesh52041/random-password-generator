@@ -17,13 +17,13 @@ password[i]=chars[rand()%poolsize];
 }
 password[length]='\0';
 printf("\ngenerated password is:%s",password);
-FILE*file=fopen("password.doc","w");
+FILE*file=fopen("password.txt","w");
 if(file==NULL) {
 printf("error could not create one\n");
 getch();
 }
 fprintf(file,"%s\n",password);
 fclose(file);
-printf("\npassword saved to password.doc");
+printf("\npassword saved to password.txt");
 getch();
 }
